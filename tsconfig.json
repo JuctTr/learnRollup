@@ -32,8 +32,10 @@
         "module": "ESNext" /* Specify what module code is generated. */,
         // "rootDir": "./",                                  /* 在源文件中指定根文件夹. */
         "moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
-        // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
-        // "paths": {},                                      /* 指定一组将导入重新映射到其他查找位置的条目。和webpack中resolve.alias配置一样 */
+        "baseUrl": "./" /* Specify the base directory to resolve non-relative module names. */,
+        "paths": {
+            "@common/*": ["src/common/*"]
+        } /* 指定一组将导入重新映射到其他查找位置的条目。和webpack中resolve.alias配置一样 */,
         // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
         // "typeRoots": [],                                  /* 指定多个文件夹，类似于'./node_modules/@types'。 */
         // "types": [],                                      /* 指定要包含的类型包名，而不需要在源文件中引用。 */

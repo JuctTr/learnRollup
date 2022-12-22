@@ -8,6 +8,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import html from "@rollup/plugin-html";
 import serve from "rollup-plugin-serve";
 import replace from "@rollup/plugin-replace";
+import alias from "@rollup/plugin-alias";
 
 /**
  * 常用的命令：
@@ -46,7 +47,13 @@ export default [
                 "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
                 preventAssignment: true
             }),
-            ,
+            alias({
+                entries: [
+                    { find: /@common/, replacement: "src/common" },
+                    { find: "@", replacement: "src" },
+                    { find: "module-a", replacement: "./module-a" }
+                ]
+            }),
             typescript({
                 sourceMap: true
             }),
