@@ -75,6 +75,7 @@ export default [
                     console.log(args.attributes);
                     console.log(args.meta);
                     console.log(args.title);
+                    console.log(args.files);
                     return `
                     <!DOCTYPE html>
                         <html lang="en">
